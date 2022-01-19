@@ -1,0 +1,106 @@
+query q1 {
+  person(personID: 22) {
+    name
+  }
+}
+
+query q2 {
+  person(personID: 20) {
+    name
+    height
+    eyeColor
+  }
+}
+
+query q3 {
+  person(personID: 10) {
+    name
+    homeworld {
+      name
+    }
+  }
+}
+
+query q4 {
+  allSpecies {
+    totalCount
+  }
+}
+
+query q5 {
+  allVehicles {
+    vehicles {
+      name
+    }
+  }
+}
+
+query q6 {
+  person(personID: 1) {
+    vehicleConnection {
+      vehicles {
+        name
+        model
+      }
+    }
+  }
+}
+
+query q7 {
+  person(personID: 4) {
+    starshipConnection {
+      starships {
+        name
+        model
+        maxAtmospheringSpeed
+      }
+    }
+  }
+}
+
+query q8 {
+  p1: person(personID: 2) {
+    name
+    eyeColor
+  }
+  p2: person(personID: 3) {
+    name
+    eyeColor
+  }
+}
+
+query q9 {
+  p1: person(personID: 13) {
+    name
+    homeworld {
+      name
+    }
+  }
+  p2: person(personID: 14) {
+    name
+    homeworld {
+      name
+    }
+  }
+}
+
+query q10 {
+  p1: person(personID: 2) {
+    name
+    filmConnection {
+      films {
+        title
+        director
+      }
+    }
+  }
+  p2: person(personID: 5) {
+    name
+    filmConnection {
+      films {
+        title
+        director
+      }
+    }
+  }
+}
