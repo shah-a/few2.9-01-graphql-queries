@@ -1,41 +1,41 @@
-query q1 {
+const q1 = `query q1 {
   person(personID: 22) {
     name
   }
-}
+}`;
 
-query q2 {
+const q2 = `query q2 {
   person(personID: 20) {
     name
     height
     eyeColor
   }
-}
+}`;
 
-query q3 {
+const q3 = `query q3 {
   person(personID: 10) {
     name
     homeworld {
       name
     }
   }
-}
+}`;
 
-query q4 {
+const q4 = `query q4 {
   allSpecies {
     totalCount
   }
-}
+}`;
 
-query q5 {
+const q5 = `query q5 {
   allVehicles {
     vehicles {
       name
     }
   }
-}
+}`;
 
-query q6 {
+const q6 = `query q6 {
   person(personID: 1) {
     vehicleConnection {
       vehicles {
@@ -44,9 +44,9 @@ query q6 {
       }
     }
   }
-}
+}`;
 
-query q7 {
+const q7 = `query q7 {
   person(personID: 4) {
     starshipConnection {
       starships {
@@ -56,9 +56,9 @@ query q7 {
       }
     }
   }
-}
+}`;
 
-query q8 {
+const q8 = `query q8 {
   p1: person(personID: 2) {
     name
     eyeColor
@@ -67,9 +67,9 @@ query q8 {
     name
     eyeColor
   }
-}
+}`;
 
-query q9 {
+const q9 = `query q9 {
   p1: person(personID: 13) {
     name
     homeworld {
@@ -82,9 +82,9 @@ query q9 {
       name
     }
   }
-}
+}`;
 
-query q10 {
+const q10 = `query q10 {
   p1: person(personID: 2) {
     name
     filmConnection {
@@ -103,4 +103,6 @@ query q10 {
       }
     }
   }
-}
+}`;
+
+export default [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
